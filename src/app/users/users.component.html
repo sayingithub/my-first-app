@@ -1,0 +1,13 @@
+<h1>Assignment</h1>
+
+<label>User Name</label>
+
+<input type="text"
+        class="form-control"
+        [(ngModel)] = "userName">
+        
+<p>{{ userName }}</p>
+
+<button class="btn btn-primary"
+        [disabled] = "userName === ''"
+        (click) = "onUserReset()">Reset User</button>
