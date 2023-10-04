@@ -3,8 +3,12 @@
     <title>My First Angular Component</title>
 </head>
 <body>
-    <p [ngStyle] = "{backgroundColor: getColour()}">
-    {{ 'Server'}} With ID {{ serverId }} is {{ serverStatus }} in {{ getServerLocation() }}
+    <p 
+        [ngStyle] = "{backgroundColor: getColour()}"
+        [ngClass] = "{online: serverStatus === 'ONLINE'}">
+    
+        {{ 'Server'}} With ID {{ serverId }} is {{ serverStatus }} in {{ getServerLocation() }}
+        
     </p>    
 </body>
 </html>
